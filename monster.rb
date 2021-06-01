@@ -12,16 +12,16 @@ class Monster < Character
       #{name} のこうげき！
       かいしんのいちげき！
       TEXT
-      brave_damage = (offense - brave.defense) / + rand(40..50)
+      brave_damage = offense - brave.defense + rand(40..50)
     else
       puts <<~TEXT
       #{name} のこうげき！
       つうじょうこうげき
       TEXT
-      brave_damage = (offense - brave.defense) / 2 + rand(0..10)
+      brave_damage = offense - brave.defense + rand(0..10)
     end
     
-    puts "#{brave.name}に #{brave_damage} のダメージをあたえた！"
+    puts "#{brave.name}は #{brave_damage} のダメージをうけた！"
     brave.hp
     brave.hp -= brave_damage
   end

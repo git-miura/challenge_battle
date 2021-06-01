@@ -9,13 +9,13 @@ class Brave < Character
       #{name} のこうげき！
       かいしんのいちげき！
       TEXT
-      monster_damage = (offense - monster.defense) / 2 + rand(40..50)
+      monster_damage = offense - monster.defense + rand(40..50)
     else
       puts <<~TEXT
-      #{@name} のこうげき！
+      #{name} のこうげき！
       つうじょうこうげき
       TEXT
-      monster_damage = (offense - monster.defense) / 2 + rand(0..10)
+      monster_damage = offense - monster.defense+ rand(0..10)
     end
     
     puts "#{monster.name}に #{monster_damage} のダメージをあたえた！"

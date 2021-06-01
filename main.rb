@@ -1,6 +1,6 @@
-require "./3_class"
-require "./3_brave"
-require "./3_monster"
+require "./class"
+require "./brave"
+require "./monster"
 
 brave = Brave.new(name: "ゆうしゃ", hp: 250, offense: 200, defense: 130)
 monsters = [
@@ -35,9 +35,10 @@ end
 monster.attack(brave)
 
 if brave.hp <= 0
-  puts "#{brave.name} はしんでしまった！"
   brave.hp = 0
   current_hp(brave, monster)
+  puts "#{brave.name} はしんでしまった！"
+  
   break
 end
 
