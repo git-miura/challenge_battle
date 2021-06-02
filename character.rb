@@ -1,7 +1,7 @@
+# frozen_string_literal: true
 class Character
   attr_reader :name, :offense, :defense
   attr_accessor :hp
-
 
   def initialize(name:, hp:, offense:, defense:)
     @name = name
@@ -9,7 +9,4 @@ class Character
     @offense = offense
     @defense = defense
   end
-  
-  
-
 end
